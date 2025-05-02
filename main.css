@@ -20,76 +20,119 @@
     --cor3: #2FA866;
     --cor4: #1A5C37;
     --cor5: #063d1e;
+
     --fonte0: 'Arial, Helvetica, sans-serif';
     --fonte1: 'idroid', sans-serif;
     --fonte2: 'inter-italic', sans-serif;
     --fonte3: 'BebasNeue', sans-serif;
 }
 
+
+body {
+    background-color: var(--cor0);
+}
+
 main { 
+    background-color: white;
     font-size: large;    
-    min-width: 400px; max-width: 800px;    
+    min-width: 280px; 
+    max-width: 800px;    
     text-align: justify;
-    margin: 0 auto;
+    margin: auto;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.23);
+    border-bottom-left-radius: 10px ;
+    border-bottom-right-radius: 10px;
+}
+
+
+ main img {
+    width: 100%;
+}
+
+main img.pequena {
+    width: 50%;
+
 }
   
 p { 
     font-size: 19px;
     font-family: Arial, Helvetica, sans-serif}
+
 header { 
-    background: linear-gradient( #3DDC84, #2FA866,#1A5C37);
+    background: linear-gradient( to bottom, var(--cor3), var(--cor5));
+    min-height: 150px;
     color: white;
     text-align: center;
     margin-top: -8px;
-    padding: 10px;
-    border-radius: 10px;
-    text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.466);    
+    padding: 20px;
+    border-radius: 2px;
+    text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.466);  
+    box-shadow: 0px 7px 9px rgba(0, 0, 0, 0.193);  
     }
     
     header > h1 {
-        font-size: 52px;
+        font-size: 3em;
+        margin-top: 10px;
+        margin-bottom: 15px;
+        text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.267);
     }
 
     header > p {
-        font-size: 23px;
+        font-size: 1.2em;
         font-family: var(--fonte2);
+        font-weight:600;
         margin-top: -16px;
+        max-width: 600px;
+        margin: auto;
+        margin-bottom: 20px;
+        padding-right: 10px;
+        padding-left: 10px;
+        text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.267);        
     }   
-
-    header > a {
-        font-size: 21px;
-    }  
+    
+    header > a { 
+        font-size: 19px;
+        text-decoration: none;
+        padding: 8px;
+        color: white;
+        font-weight:bold;
+        margin-right: 8px;   
+        font-family: var(--fonte2);
+}
 
 a {
-    color: var(--cor5);
+    color: var(--cor5);    
     text-decoration: none;
     font-weight: 600;    
+}
+
+strong {
+    color: var(--cor5);
 }
 
 header > a:hover {
     background-color: #2FA866;
     padding: 2px 5px 2px 5px;
-    border-radius: 5px;
+    border-radius: 5px;   
+
 }
 
-header > a { 
-    text-decoration: none;
-    color: white;
-    font-weight:bold;
-    margin-right: 8px;   
+
+
+section {
+    padding: 0px 25px 0px 25px;
 }
 
 div.video {
     position: relative;
     background-color: var(--cor4);
     height: 0px;
-    margin-left:-20px;
-    margin-right: -20px;
+    margin-left: 0px;
+    margin-right: 0px;
     margin-top: 20px;
     margin-bottom: 15px;
     padding-bottom: 59%;  
     border-radius: 10px;  
-
 }
 
 div.video > iframe {
@@ -101,13 +144,16 @@ div.video > iframe {
 }
 
 #android_candies {
-    background-color:var(--cor0);
+    background-color:var(--cor1);
     padding-bottom: 10px;
     padding-left: 10px;
     border-radius: 10px;
     padding-right: 20px;
-    margin-left: -19px;
-    margin-right: -19px;
+    margin-left: 0px;
+    margin-right: 0px;
+    border-bottom: 10px;
+   
+  
 }
 #android_candies > ol > li {
     font-family: var(--fonte2);
@@ -116,24 +162,25 @@ div.video > iframe {
 div.bugdroid_flex {
     display: flex;
     justify-content: center;
-    align-items: center;      
+    align-items: center;    
+    padding: 20px;  
 }
 
 ol {    
     columns: 2;
     list-style-position: inside;
-}    
-    
+}  
+
+
  h1 {
     font-family: var(--fonte3);
  }
 
 h2,h3 { font-family: var(--fonte1);
     color: var(--cor5);
-}
-
-h3 {
-    background-color: var(--cor0);
+   background-color: var(--cor0);
+   padding: 0px 0px 0px 20px;
+   margin-right: -5px;   
 }
 
 h4 {
@@ -151,10 +198,10 @@ h4 {
 footer { 
     font-family: var(--fonte2);
     text-align: center;
-    background-color: var(--cor0) ;
-    margin: 15px -19px 15px -19px;
+    background-color: var(--cor3) ;
+    margin: 15px -25px 15px -25px;
     padding-top: 8px;
     padding-bottom: 8px;
-    border-radius: 10px;
+    border-radius: 4px;
 }
 
