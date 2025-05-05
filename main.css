@@ -13,6 +13,7 @@
     font-family:'BebasNeue';
     src: url(fontes/BebasNeue-Regular.ttf);
 }
+
 :root {
     --cor0: #c5ebd6;
     --cor1: #83E1AD;
@@ -32,32 +33,46 @@ body {
     background-color: var(--cor0);
 }
 
+a.externo::after {
+    content: '\00A0\1F517';
+}
+
+p { 
+    font-size: 19px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 15px 10px;
+    text-indent: 30px;
+    line-height: 1.5em;
+    font-size: 1em;
+}
+
 main { 
     background-color: white;
     font-size: large;    
     min-width: 280px; 
     max-width: 800px;    
     text-align: justify;
-    margin: auto;
+    margin: 0 auto;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.23);
     border-bottom-left-radius: 10px ;
     border-bottom-right-radius: 10px;
 }
 
+main a:hover {
+    text-decoration: underline;
+    color: var(--cor3);
+}
 
  main img {
     width: 100%;
 }
 
 main img.pequena {
-    width: 50%;
-
+    max-width: 350px;
+    display: block;
+    margin: auto;
 }
   
-p { 
-    font-size: 19px;
-    font-family: Arial, Helvetica, sans-serif}
-
 header { 
     background: linear-gradient( to bottom, var(--cor3), var(--cor5));
     min-height: 150px;
@@ -68,16 +83,16 @@ header {
     border-radius: 2px;
     text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.466);  
     box-shadow: 0px 7px 9px rgba(0, 0, 0, 0.193);  
-    }
+}
     
-    header > h1 {
+header > h1 {
         font-size: 3em;
         margin-top: 10px;
         margin-bottom: 15px;
         text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.267);
-    }
+}
 
-    header > p {
+header > p {
         font-size: 1.2em;
         font-family: var(--fonte2);
         font-weight:600;
@@ -88,9 +103,9 @@ header {
         padding-right: 10px;
         padding-left: 10px;
         text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.267);        
-    }   
+}   
     
-    header > a { 
+header > a { 
         font-size: 19px;
         text-decoration: none;
         padding: 8px;
@@ -98,7 +113,7 @@ header {
         font-weight:bold;
         margin-right: 8px;   
         font-family: var(--fonte2);
-}
+    }
 
 a {
     color: var(--cor5);    
@@ -111,24 +126,21 @@ strong {
 }
 
 header > a:hover {
-    background-color: #2FA866;
+    background-color:var(--cor3);
     padding: 2px 5px 2px 5px;
-    border-radius: 5px;   
-
+    border-radius: 5px;  
+    color: white;
+    text-decoration: none;
 }
 
-
-
 section {
-    padding: 0px 25px 0px 25px;
+    padding: 0px 25px 1px 25px;
 }
 
 div.video {
     position: relative;
     background-color: var(--cor4);
     height: 0px;
-    margin-left: 0px;
-    margin-right: 0px;
     margin-top: 20px;
     margin-bottom: 15px;
     padding-bottom: 59%;  
@@ -143,65 +155,55 @@ div.video > iframe {
     height: 90%;
 }
 
-#android_candies {
-    background-color:var(--cor1);
-    padding-bottom: 10px;
-    padding-left: 10px;
-    border-radius: 10px;
-    padding-right: 20px;
-    margin-left: 0px;
-    margin-right: 0px;
-    border-bottom: 10px;
-   
-  
-}
-#android_candies > ol > li {
-    font-family: var(--fonte2);
-}
-
-div.bugdroid_flex {
-    display: flex;
-    justify-content: center;
-    align-items: center;    
-    padding: 20px;  
-}
-
-ol {    
-    columns: 2;
-    list-style-position: inside;
-}  
-
-
  h1 {
     font-family: var(--fonte3);
  }
 
-h2,h3 { font-family: var(--fonte1);
-    color: var(--cor5);
-   background-color: var(--cor0);
-   padding: 0px 0px 0px 20px;
-   margin-right: -5px;   
+h2,h3 { 
+    font-family: var(--fonte1);
+    color: var(--cor4);
+    font-size: 1.3em; 
+    text-indent: 8px;      
+    background-image: linear-gradient(to right, var(--cor1), transparent);
 }
 
-h4 {
+aside {
+    background-color:var(--cor1);     
+    border-radius: 10px;  
+    padding: 10px;      
+}
+
+aside > h4 {
+    background-color: var(--cor3);
     font-family: var(--fonte2);
-    font-size: 22px;
-    background-color: #3DDC84;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    margin-left: -10px;
-    padding-left: 10px;
-    border-radius: 4px;
-    margin-right: -20px;
+    font-size: 1.2em;
+    padding: 10px;
+    margin: -10px -10px 0px -10px;
+    border-radius: 10px 10px 0px 0px;
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.285);
+}
+
+aside > ul  {
+    list-style-type: '\2705\00A0\00A0';
+    font-family: var(--fonte2);
+    columns: 2;
+    list-style-position: inside;
+}
+
+aside > p {
+    text-align: justify;
+
 }
 
 footer { 
     font-family: var(--fonte2);
+    font-weight: 500;
     text-align: center;
-    background-color: var(--cor3) ;
-    margin: 15px -25px 15px -25px;
-    padding-top: 8px;
-    padding-bottom: 8px;
-    border-radius: 4px;
+    background-color: var(--cor3);
+    margin: 12px 0px 12px 0px;
+    padding: 8px;
+    border-radius: 9px;
 }
+
+
 
